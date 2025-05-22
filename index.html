@@ -5,9 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Safdar Ali | Backend Developer Portfolio</title>
+  <link rel="icon" type="image/png" href="path-to-your-favicon.png"> <!-- Add favicon -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -869,6 +872,84 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Projects Section */
+    #projects {
+      background: var(--white);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--lighter-gray);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .project-header h3 {
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tech span {
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .project-details {
+      list-style: none;
+    }
+
+    .project-details li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--medium-gray);
+    }
+
+    .project-details li i {
+      color: var(--success);
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -885,6 +966,8 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a> <!-- Added Projects link -->
+
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -895,27 +978,50 @@
     <div class="container hero-container">
       <div class="hero-content">
         <h1>Hi, I'm <span>Safdar Ali</span></h1>
-        <p>Backend Developer specializing in PHP, Laravel, and scalable web applications. I build robust systems that deliver real business value.</p>
+        <p>Backend Developer specializing in PHP, Laravel, and scalable web applications. I build robust systems that
+          deliver real business value.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">Hire Me</a>
           <a href="#about" class="btn btn-outline">Learn More</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Safdar Ali">
+        <img
+          src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+          alt="Safdar Ali">
         <div class="hero-shape shape-1"></div>
         <div class="hero-shape shape-2"></div>
       </div>
     </div>
   </section>
+  <!-- <section id="hero">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Safdar Ali</span></h1>
+      <p>Backend Developer specializing in PHP, Laravel, and scalable web applications. I build robust systems that deliver real business value.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="your-profile-image.jpg" alt="Safdar Ali - Backend Developer"> <!-- Update with your image -->
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+    </div>
+  </div>
+</section> -->
 
   <section id="about">
     <div class="container about-container">
       <div class="about-content">
         <span class="section-title"><i class="fas fa-user"></i> About Me</span>
         <h3>Backend Developer with Laravel Expertise</h3>
-        <p>I'm a passionate backend developer with 1+ years of experience building scalable web applications using PHP and Laravel. I specialize in creating custom CMS, LMS, and ERP systems with clean, maintainable code.</p>
-        <p>My approach combines technical excellence with business understanding to deliver solutions that solve real problems. I'm particularly skilled at designing RESTful APIs, implementing multi-tenant architectures, and optimizing database performance.</p>
+        <p>I'm a passionate backend developer with 1+ years of experience building scalable web applications using PHP
+          and Laravel. I specialize in creating custom CMS, LMS, and ERP systems with clean, maintainable code.</p>
+        <p>My approach combines technical excellence with business understanding to deliver solutions that solve real
+          problems. I'm particularly skilled at designing RESTful APIs, implementing multi-tenant architectures, and
+          optimizing database performance.</p>
         <div class="about-stats">
           <div class="stat-item">
             <h4>1+</h4>
@@ -932,7 +1038,9 @@
         </div>
       </div>
       <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="About Safdar">
+        <img
+          src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+          alt="About Safdar">
       </div>
     </div>
   </section>
@@ -951,7 +1059,9 @@
             <h3 class="timeline-title">Software Developer</h3>
             <p class="timeline-subtitle">Edtech Innovate Pvt. Ltd</p>
             <p class="timeline-description">
-              Developed tailored CMS, LMS, and ERP systems using Laravel and MySQL. Created subdomain-based multi-tenant CMS with isolated databases. Designed RESTful APIs with token-based authentication and implemented Laravel Jetstream + Breeze for authentication.
+              Developed tailored CMS, LMS, and ERP systems using Laravel and MySQL. Created subdomain-based multi-tenant
+              CMS with isolated databases. Designed RESTful APIs with token-based authentication and implemented Laravel
+              Jetstream + Breeze for authentication.
             </p>
           </div>
         </div>
@@ -962,7 +1072,9 @@
             <h3 class="timeline-title">Intern</h3>
             <p class="timeline-subtitle">Smart Data Enterprises, Mohali</p>
             <p class="timeline-description">
-              Developed Laravel backend modules for inventory and product management with AJAX CRUD operations. Integrated Pincode API for automatic location filling and created secure RESTful APIs for frontend integration.
+              Developed Laravel backend modules for inventory and product management with AJAX CRUD operations.
+              Integrated Pincode API for automatic location filling and created secure RESTful APIs for frontend
+              integration.
             </p>
           </div>
         </div>
@@ -973,7 +1085,8 @@
             <h3 class="timeline-title">Trainee</h3>
             <p class="timeline-subtitle">National Informatics Center (NIC)</p>
             <p class="timeline-description">
-              Developed a file storage system handling multiple file formats using C and QT Creator. Designed and implemented the software UI using QT Creator for seamless user interaction.
+              Developed a file storage system handling multiple file formats using C and QT Creator. Designed and
+              implemented the software UI using QT Creator for seamless user interaction.
             </p>
           </div>
         </div>
@@ -1050,6 +1163,86 @@
     </div>
   </section>
 
+  <!-- Add this section after Skills section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Key implementations demonstrating technical expertise and problem-solving</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Skill App Project -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Skill App – Admin Portal & API Development</h3>
+            <div class="project-tech">
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>REST API</span>
+              <span>Jetstream</span>
+            </div>
+          </div>
+          <ul class="project-details">
+            <li><i class="fas fa-check-circle"></i> Built a robust backend infrastructure using Laravel Jetstream +
+              Breeze with multi-authentication and role-based access control (RBAC) for different user types
+            </li>
+            <li><i class="fas fa-check-circle"></i>Developed user-specific dashboards and permissions based on assigned
+              roles (Admin, Staff, Reviewer)</li>
+            <li><i class="fas fa-check-circle"></i>Implemented an OTP-based login system with one-time login logic per
+              phone to enhance mobile security and simplify user access</li>
+            <li><i class="fas fa-check-circle"></i>Managed student doubts and queries for the LMS directly from the
+              admin portal</li>
+            <li><i class="fas fa-check-circle"></i>Designed and developed admission workflows with form validation and
+              dynamic role-based access</li>
+            <li><i class="fas fa-check-circle"></i>Integrated Payment Gateway with automated invoice generation</li>
+            <li><i class="fas fa-check-circle"></i>Created RESTful APIs using Postman for seamless integration with the
+              mobile application</li>
+            <li><i class="fas fa-check-circle"></i>Optimized MySQL queries, significantly improving overall backend
+              performance</li>
+            <li><i class="fas fa-check-circle"></i>Actively participated in sprint planning and Agile development
+              cycles, contributing to team goals and delivery timelines</li>
+
+          </ul>
+        </div>
+
+        <!-- Master CMS Project -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Master CMS – Multi-Tenant Platform</h3>
+            <div class="project-tech">
+              <span>Multi-Tenancy</span>
+              <span>Laravel</span>
+              <span>AJAX</span>
+              <span>SMTP</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <ul class="project-details">
+            <li><i class="fas fa-check-circle"></i> Developed a subdomain-based CMS with full multi-tenant support,
+              allowing multiple clients to operate on separate databases while using a single source codebase.</li>
+            <li><i class="fas fa-check-circle"></i>Engineered a flexible architecture for dynamic database management
+              and user separation, ensuring data security and scalability</li>
+            <li><i class="fas fa-check-circle"></i> Implemented theme settings, setting headings, and setting
+              dependencies, enabling each tenant to customize their platform's look, behavior, and structure
+              independently</li>
+            <li><i class="fas fa-check-circle"></i>Designed a dynamic website flow that works in three steps: first add
+              setting headings, then assign dependencies, and finally trigger automated, data-driven front-end behaviour
+            </li>
+            <li><i class="fas fa-check-circle"></i>Built a Super Admin panel with version-controlled APIs to efficiently
+              manage tenants, user roles, and system configurations</li>
+            <li><i class="fas fa-check-circle"></i>Integrated Forgot Password functionality using SMTP, ensuring secure
+              email-based account recovery</li>
+            <li><i class="fas fa-check-circle"></i> Developed a dynamic assignment system for entities like departments,
+              allowing tenants to create and manage content structures tailored to their organization</li>
+            <li><i class="fas fa-check-circle"></i> Built interactive AJAX-based CRUD interfaces and reusable Laravel
+              Eloquent components to maintain modularity and high performance across the platform</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="education">
     <div class="container">
       <div class="section-header">
@@ -1101,7 +1294,7 @@
             </div>
             <div class="education-detail">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Roorkee, Uttar Pradesh</span>
+              <span>Saharanpur, Uttar Pradesh</span>
             </div>
           </div>
         </div>
@@ -1144,6 +1337,16 @@
               <a href="https://www.linkedin.com/in/safdar-ali-4458a71a3" target="_blank">linkedin.com/in/safdar-ali</a>
             </div>
           </div>
+          <div class="contact-card">
+  <div class="contact-icon">
+    <i class="fab fa-github"></i>
+  </div>
+  <div class="contact-details">
+    <h3>GitHub</h3>
+    <a href="https://github.com/safdar-dev" target="_blank">github.com/safdar-dev</a>
+  </div>
+</div>
+
         </div>
         <div class="contact-form">
           <form id="contactForm">
@@ -1172,11 +1375,92 @@
 
   <footer>
     <div class="container">
-
-
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Safdar<span>Ali</span></h3>
+          <p>Backend Developer specializing in PHP and Laravel, focused on building secure, scalable web applications
+            with clean architecture and modern practices.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/safdar-ali-4458a71a3" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/safdar-dev" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:safdarali.cse@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Saharanpur, Uttar Pradesh, India</p>
+            <p><i class="fas fa-phone-alt"></i> +91 9568890557</p>
+            <p><i class="fas fa-envelope"></i> safdarali.cse@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Safdar Ali. All rights reserved | Crafted with <i class="fas fa-heart"
+          style="color: var(--secondary)"></i>
+      </div>
     </div>
   </footer>
 </body>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+  // Mobile menu toggle
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+
+  // Back to top button
+  window.addEventListener('scroll', function() {
+    const backToTop = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      backToTop.classList.add('active');
+    } else {
+      backToTop.classList.remove('active');
+    }
+  });
+
+  document.getElementById('backToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Smooth scroll for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Form handling
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Thank you for your message! I will respond shortly.');
+    this.reset();
+  });
+</script>
 
 </html>
